@@ -1,0 +1,9 @@
+input: {"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"Cline","version":"3.17.5"}},"jsonrpc":"2.0","id":0}
+output: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-03-26","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"weather","version":"1.9.1"}}}
+input: {"method":"notifications/initialized","jsonrpc":"2.0"}
+input: {"method":"tools/list","jsonrpc":"2.0","id":1}
+output: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_alerts","description":"Get weather alerts for a US state.\n\nArgs:\n    state: Two-letter US state code (e.g. CA, NY)\n","inputSchema":{"properties":{"state":{"title":"State","type":"string"}},"required":["state"],"title":"get_alertsArguments","type":"object"}},{"name":"get_forecast","description":"Get weather forecast for a location.\n\nArgs:\n    latitude: Latitude of the location\n    longitude: Longitude of the location\n","inputSchema":{"properties":{"latitude":{"title":"Latitude","type":"number"},"longitude":{"title":"Longitude","type":"number"}},"required":["latitude","longitude"],"title":"get_forecastArguments","type":"object"}}]}}
+input: {"method":"resources/list","jsonrpc":"2.0","id":2}
+output: {"jsonrpc":"2.0","id":2,"result":{"resources":[]}}
+input: {"method":"resources/templates/list","jsonrpc":"2.0","id":3}
+output: {"jsonrpc":"2.0","id":3,"result":{"resourceTemplates":[]}}
